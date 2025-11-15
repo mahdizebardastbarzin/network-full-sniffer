@@ -1,0 +1,17 @@
+{
+  "snis": [
+    {
+      "timestamp": "2025-11-15T02:14:46.846535Z",
+      "src": "192.168.1.5",
+      "dst": "62.210.92.65",
+      "sni": "camembert-1-fr.maxxxcdn.com"
+    },
+    {
+      "timestamp": "2025-11-15T02:14:46.846535Z",
+      "src": "192.168.1.5",
+      "dst": "62.210.92.65",
+      "sni": "camembert-1-fr.maxxxcdn.com"
+    }
+  ],
+  "count": 2
+}

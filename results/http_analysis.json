@@ -1,0 +1,95 @@
+{
+  "http_events": [
+    {
+      "timestamp": "2025-11-15T02:14:46.347471Z",
+      "src": "192.168.1.5:11996",
+      "dst": "142.54.189.109:80",
+      "parsed": {
+        "type": "request",
+        "line": "GET /DigiCertGlobalRootG2.crl HTTP/1.1",
+        "path": "/DigiCertGlobalRootG2.crl",
+        "headers": {
+          "Cache-Control": "max-age = 5019",
+          "Connection": "Keep-Alive",
+          "Accept": "*/*",
+          "If-Modified-Since": "Wed, 12 Nov 2025 20:50:05 GMT",
+          "If-None-Match": "\"6914f2fd-493\"",
+          "User-Agent": "Microsoft-CryptoAPI/10.0",
+          "Host": "crl3.digicert.com"
+        },
+        "raw": "GET /DigiCertGlobalRootG2.crl HTTP/1.1\r\nCache-Control: max-age = 5019\r\nConnection: Keep-Alive\r\nAccept: */*\r\nIf-Modified-Since: Wed, 12 Nov 2025 20:50:05 GMT\r\nIf-None-Match: \"6914f2fd-493\"\r\nUser-Agent: Microsoft-CryptoAPI/10.0\r\nHost: crl3.digicert.com\r\n\r\n"
+      }
+    },
+    {
+      "timestamp": "2025-11-15T02:14:46.583929Z",
+      "src": "142.54.189.109:80",
+      "dst": "192.168.1.5:11996",
+      "parsed": {
+        "type": "response",
+        "status": "HTTP/1.1 304 Not Modified",
+        "raw": "HTTP/1.1 304 Not Modified\r\nContent-Type: application/pkix-crl\r\nLast-Modified: Wed, 12 Nov 2025 20:50:05 GMT\r\nETag: \"6914f2fd-493\"\r\nCache-Control: public, max-age=1852\r\nExpires: Sat, 15 Nov 2025 02:45:34 GMT\r\nDate: Sat, 15 Nov 2025 02:14:42 GMT\r\nConnection: keep-alive\r\nAkamai-GRN: 0.8e12df17.1763172882.3bf5f3c6\r\n\r\n"
+      }
+    },
+    {
+      "timestamp": "2025-11-15T02:14:46.347471Z",
+      "src": "192.168.1.5:11996",
+      "dst": "142.54.189.109:80",
+      "parsed": {
+        "type": "request",
+        "line": "GET /DigiCertGlobalRootG2.crl HTTP/1.1",
+        "path": "/DigiCertGlobalRootG2.crl",
+        "headers": {
+          "Cache-Control": "max-age = 5019",
+          "Connection": "Keep-Alive",
+          "Accept": "*/*",
+          "If-Modified-Since": "Wed, 12 Nov 2025 20:50:05 GMT",
+          "If-None-Match": "\"6914f2fd-493\"",
+          "User-Agent": "Microsoft-CryptoAPI/10.0",
+          "Host": "crl3.digicert.com"
+        },
+        "raw": "GET /DigiCertGlobalRootG2.crl HTTP/1.1\r\nCache-Control: max-age = 5019\r\nConnection: Keep-Alive\r\nAccept: */*\r\nIf-Modified-Since: Wed, 12 Nov 2025 20:50:05 GMT\r\nIf-None-Match: \"6914f2fd-493\"\r\nUser-Agent: Microsoft-CryptoAPI/10.0\r\nHost: crl3.digicert.com\r\n\r\n"
+      }
+    },
+    {
+      "timestamp": "2025-11-15T02:14:46.583929Z",
+      "src": "142.54.189.109:80",
+      "dst": "192.168.1.5:11996",
+      "parsed": {
+        "type": "response",
+        "status": "HTTP/1.1 304 Not Modified",
+        "raw": "HTTP/1.1 304 Not Modified\r\nContent-Type: application/pkix-crl\r\nLast-Modified: Wed, 12 Nov 2025 20:50:05 GMT\r\nETag: \"6914f2fd-493\"\r\nCache-Control: public, max-age=1852\r\nExpires: Sat, 15 Nov 2025 02:45:34 GMT\r\nDate: Sat, 15 Nov 2025 02:14:42 GMT\r\nConnection: keep-alive\r\nAkamai-GRN: 0.8e12df17.1763172882.3bf5f3c6\r\n\r\n"
+      }
+    },
+    {
+      "timestamp": "2025-11-15T02:14:46.347471Z",
+      "src": "192.168.1.5:11996",
+      "dst": "142.54.189.109:80",
+      "parsed": {
+        "type": "request",
+        "line": "GET /DigiCertGlobalRootG2.crl HTTP/1.1",
+        "path": "/DigiCertGlobalRootG2.crl",
+        "headers": {
+          "Cache-Control": "max-age = 5019",
+          "Connection": "Keep-Alive",
+          "Accept": "*/*",
+          "If-Modified-Since": "Wed, 12 Nov 2025 20:50:05 GMT",
+          "If-None-Match": "\"6914f2fd-493\"",
+          "User-Agent": "Microsoft-CryptoAPI/10.0",
+          "Host": "crl3.digicert.com"
+        },
+        "raw": "GET /DigiCertGlobalRootG2.crl HTTP/1.1\r\nCache-Control: max-age = 5019\r\nConnection: Keep-Alive\r\nAccept: */*\r\nIf-Modified-Since: Wed, 12 Nov 2025 20:50:05 GMT\r\nIf-None-Match: \"6914f2fd-493\"\r\nUser-Agent: Microsoft-CryptoAPI/10.0\r\nHost: crl3.digicert.com\r\n\r\n"
+      }
+    },
+    {
+      "timestamp": "2025-11-15T02:14:46.583929Z",
+      "src": "142.54.189.109:80",
+      "dst": "192.168.1.5:11996",
+      "parsed": {
+        "type": "response",
+        "status": "HTTP/1.1 304 Not Modified",
+        "raw": "HTTP/1.1 304 Not Modified\r\nContent-Type: application/pkix-crl\r\nLast-Modified: Wed, 12 Nov 2025 20:50:05 GMT\r\nETag: \"6914f2fd-493\"\r\nCache-Control: public, max-age=1852\r\nExpires: Sat, 15 Nov 2025 02:45:34 GMT\r\nDate: Sat, 15 Nov 2025 02:14:42 GMT\r\nConnection: keep-alive\r\nAkamai-GRN: 0.8e12df17.1763172882.3bf5f3c6\r\n\r\n"
+      }
+    }
+  ],
+  "count": 6
+}

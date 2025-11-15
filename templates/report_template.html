@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>گزارش تحلیل ترافیک شبکه | مدرسه‌ما</title>
+    <style>
+        body {
+            margin: 0;
+            background: #0d0d0f;
+            font-family: "IRANSans", sans-serif;
+            color: #f5f5f5;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 10px;
+            border-bottom: 1px solid #202027;
+            background: linear-gradient(180deg, #121218, #0d0d0f);
+        }
+
+        .header img {
+            height: 90px;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+
+        .header h2 {
+            margin: 10px 0 0 0;
+            font-size: 18px;
+            color: #c4c4c4;
+            font-weight: 400;
+        }
+
+        .section {
+            margin: 30px auto;
+            max-width: 900px;
+            padding: 25px;
+            background: #14141b;
+            border-radius: 14px;
+            border: 1px solid #1f1f27;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+
+        .section h3 {
+            margin-top: 0;
+            font-size: 22px;
+            border-right: 4px solid #4b7bec;
+            padding-right: 12px;
+            color: #fff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 12px 10px;
+            text-align: right;
+            border-bottom: 1px solid #24242e;
+        }
+
+        th {
+            background: #1c1c25;
+            color: #4b7bec;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #1a1a22;
+        }
+
+        .footer {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .badge {
+            padding: 4px 9px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .badge-http { background: #4b7bec; }
+        .badge-dns  { background: #f1c40f; }
+        .badge-tls  { background: #9b59b6; }
+        .badge-arp  { background: #e67e22; }
+        .badge-attk { background: #e74c3c; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://madresema.ir/wp-content/uploads/2023/12/cropped-logo-smal-madresema.ir_-300x300.png" alt="مدرسه‌ما">
+        <h1>گزارش تحلیل ترافیک شبکه</h1>
+        <h2>ساخته شده توسط Network Sniffer - مدرسه‌ما</h2>
+    </div>
+
+    <div class="section">
+        <h3>۱) اطلاعات کلّی شبکه</h3>
+        {{summary_table}}
+    </div>
+
+    <div class="section">
+        <h3>۲) درخواست‌های HTTP <span class="badge badge-http">HTTP</span></h3>
+        {{http_table}}
+    </div>
+
+    <div class="section">
+        <h3>۳) تحلیل DNS <span class="badge badge-dns">DNS</span></h3>
+        {{dns_table}}
+    </div>
+
+    <div class="section">
+        <h3>۴) TLS / استخراج SNI <span class="badge badge-tls">TLS</span></h3>
+        {{tls_table}}
+    </div>
+
+    <div class="section">
+        <h3>۵) مانیتورینگ ARP <span class="badge badge-arp">ARP</span></h3>
+        {{arp_table}}
+    </div>
+
+    <div class="section">
+        <h3>۶) تهدیدها و حملات شناسایی‌شده <span class="badge badge-attk">ATTACK</span></h3>
+        {{attack_table}}
+    </div>
+
+    <div class="footer">
+        © مدرسه‌ما | تولید شده توسط Sniffer — مهدی زبردست برزین
+    </div>
+
+</body>
+</html>
