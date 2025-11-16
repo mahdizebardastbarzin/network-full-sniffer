@@ -291,7 +291,15 @@ python sniffer.py --filter http
 * HTML + CSS
 
 ---
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](https://github.com/mahdizebardastbarzin/mahdizebardastbarzin/blob/main/CONTRIBUTING.md) to get started.
+
+## 🤝 مشارکت
+
+مشارکت‌های شما خوش‌آمد است! لطفاً [راهنمای مشارکت](https://github.com/mahdizebardastbarzin/mahdizebardastbarzin/blob/main/CONTRIBUTING.md) را مطالعه کنید.
 
 ## 📜 License
 
 This project is provided for educational and research purposes.
+
