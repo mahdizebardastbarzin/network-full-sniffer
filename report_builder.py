@@ -1,5 +1,6 @@
 import json
 import os
+import html
 
 def load_json(path):
     if not os.path.exists(path):
@@ -7,19 +8,33 @@ def load_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
+def escape_html(text):
+    """Escape HTML special characters to prevent XSS and display issues."""
+    if text is None:
+        return ""
+    return html.escape(str(text))
+
 def build_table(data, columns):
     if not data:
-        return "<p>هیچ داده‌ای موجود نیست.</p>"
-    table = "<table><tr>"
+        return "<div class='no-data'>هیچ داده‌ای موجود نیست.</div>"
+    
+    table = "<div class='table-container'><table>"
+    
+    # Table header
+    table += "<thead><tr>"
     for col in columns:
-        table += f"<th>{col}</th>"
-    table += "</tr>"
+        table += f"<th>{escape_html(col)}</th>"
+    table += "</tr></thead>"
+    
+    # Table body
+    table += "<tbody>"
     for row in data:
         table += "<tr>"
         for col in columns:
-            table += f"<td>{row.get(col, '')}</td>"
+            cell_value = row.get(col, '')
+            table += f"<td>{escape_html(cell_value)}</td>"
         table += "</tr>"
-    table += "</table>"
+    table += "</tbody></table></div>"
     return table
 
 def build():
@@ -127,17 +142,42 @@ def build():
     else:
         template = "<html><body><h1>Report</h1><pre>{{REPORT}}</pre></body></html>"
 
-    html_content = template.replace("{{summary_table}}", summary_table_html)\
-                           .replace("{{http_table}}", http_table_html)\
-                           .replace("{{dns_table}}", dns_table_html)\
-                           .replace("{{tls_table}}", tls_table_html)\
-                           .replace("{{arp_table}}", arp_table_html)\
-                           .replace("{{attack_table}}", attack_table_html)
+    # Debug: Print template placeholders
+    print("Template placeholders found in the file:")
+    import re
+    placeholders = re.findall(r'\{\{.*?\}\}', template)
+    print(placeholders)
+
+    # Replace placeholders with actual content
+    replacements = {
+        "{{summary_table}}": summary_table_html,
+        "{{http_table}}": http_table_html,
+        "{{dns_table}}": dns_table_html,
+        "{{tls_table}}": tls_table_html,
+        "{{arp_table}}": arp_table_html,
+        "{{attack_table}}": attack_table_html
+    }
+    
+    # Debug: Print replacements
+    print("\nReplacing placeholders with content:")
+    for placeholder, content in replacements.items():
+        print(f"- {placeholder}: {bool(content)} (length: {len(str(content))} chars)")
+    
+    # Perform all replacements
+    html_content = template
+    for placeholder, content in replacements.items():
+        replacement = content if content else "<div class='no-data'>هیچ داده‌ای موجود نیست.</div>"
+        html_content = html_content.replace(placeholder, replacement)
+    
+    # Debug: Check if replacements were made
+    missing_placeholders = [p for p in placeholders if p not in replacements]
+    if missing_placeholders:
+        print("\nWarning: The following placeholders were not replaced:", missing_placeholders)
 
     with open("results/report.html", "w", encoding="utf-8") as f:
         f.write(html_content)
 
-    print("📁 گزارش کامل ایجاد شد: results/report.json و results/report.html")
+    print("Report generated successfully: results/report.json and results/report.html")
 
 if __name__ == "__main__":
     build()

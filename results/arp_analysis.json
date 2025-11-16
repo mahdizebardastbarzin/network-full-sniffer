@@ -1,4 +1,14 @@
 {
-  "arp_count": 4,
-  "suspicious": []
+  "analysis_timestamp": "2025-11-16T05:55:17.785790Z",
+  "arp_count": 29,
+  "unique_ips": 3,
+  "unique_macs": 3,
+  "suspicious_activity_count": 0,
+  "suspicious_activity": [],
+  "arp_operations": {
+    "REQUEST": 0,
+    "REPLY": 0,
+    "RARP_REQUEST": 0,
+    "RARP_REPLY": 0
+  }
 }

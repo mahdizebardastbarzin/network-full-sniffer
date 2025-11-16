@@ -1,6 +1,45 @@
 {
-  "queries": [],
-  "responses": [],
-  "query_count": 0,
-  "response_count": 0
+  "total_packets": 22583,
+  "dns_packets": 1001,
+  "queries": 0,
+  "responses": 0,
+  "query_types": {},
+  "response_codes": {},
+  "domains": {},
+  "suspicious_domains": [],
+  "start_time": "2025-11-16T07:14:13.705439",
+  "end_time": "2025-11-16T07:14:13.794285",
+  "duration_seconds": 0.088846,
+  "top_queried_domains": [],
+  "top_source_ips": [],
+  "unique_domains": [],
+  "unique_clients": [],
+  "unique_servers": [],
+  "dns_servers": {},
+  "clients": {},
+  "suspicious_activities": {
+    "dns_tunneling": [],
+    "data_exfiltration": [],
+    "dns_amplification": [],
+    "nxdomain_attacks": [],
+    "dns_rebinding": []
+  },
+  "protocols": {
+    "udp": 0,
+    "tcp": 0
+  },
+  "record_types": {},
+  "packet_sizes": {
+    "min": 0,
+    "max": 0,
+    "total": 0,
+    "count": 0,
+    "average": 0
+  },
+  "timing": {
+    "first_packet": null,
+    "last_packet": null
+  },
+  "error_count": 0,
+  "warnings": []
 }

@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <title>گزارش تحلیل ترافیک شبکه | مدرسه‌ما</title>
     <style>
+        @font-face {
+            font-family: 'IRANSans';
+            src: url('https://cdn.fontcdn.ir/Font.PN/IRANSansWeb.woff2') format('woff2'),
+                 url('https://cdn.fontcdn.ir/Font.PN/IRANSansWeb.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
             margin: 0;
+            padding: 0;
             background: #0d0d0f;
-            font-family: "IRANSans", sans-serif;
+            font-family: "IRANSans", Tahoma, sans-serif;
             color: #f5f5f5;
+            line-height: 1.6;
         }
 
         .header {
@@ -56,26 +66,55 @@
             color: #fff;
         }
 
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #24242e;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
+            margin: 0;
         }
 
         th, td {
-            padding: 12px 10px;
+            padding: 12px 15px;
             text-align: right;
             border-bottom: 1px solid #24242e;
+            vertical-align: top;
+            word-break: break-word;
         }
 
-        th {
+        thead th {
+            position: sticky;
+            top: 0;
             background: #1c1c25;
             color: #4b7bec;
             font-weight: 600;
+            z-index: 10;
         }
 
-        tr:hover {
-            background: #1a1a22;
+        tbody tr:nth-child(even) {
+            background-color: #121218;
+        }
+
+        tbody tr:hover {
+            background-color: #1e2a3b;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-style: italic;
+            background: #14141b;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 1px dashed #2a2a3a;
         }
 
         .footer {
@@ -109,32 +148,32 @@
 
     <div class="section">
         <h3>۱) اطلاعات کلّی شبکه</h3>
-        <table><tr><th>Metric</th><th>Value</th></tr><tr><td>total_packets</td><td>250</td></tr><tr><td>total_bytes</td><td>86375</td></tr><tr><td>protocol_usage</td><td>{'TCP': 234, 'UDP': 12, 'ARP': 4}</td></tr><tr><td>top_src_ips</td><td>[['192.168.1.5', 114], ['50.7.85.220', 54], ['62.210.92.65', 34], ['50.7.87.84', 25], ['142.54.189.109', 9], ['178.22.122.100', 6], ['185.231.114.218', 6], ['192.168.1.1', 2]]</td></tr><tr><td>top_dst_ips</td><td>[['192.168.1.5', 136], ['50.7.85.220', 36], ['62.210.92.65', 34], ['50.7.87.84', 20], ['142.54.189.109', 12], ['178.22.122.100', 6], ['185.231.114.218', 4], ['192.168.1.1', 2]]</td></tr><tr><td>top_ports</td><td>[[443, 145], [11995, 90], [48463, 68], [13636, 53], [1559, 45], [11996, 21], [80, 21], [11987, 15], [53, 12], [11993, 10], [64350, 6], [56621, 6]]</td></tr></table>
+        <div class='table-container'><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td>total_packets</td><td>2324</td></tr><tr><td>total_bytes</td><td>962709</td></tr><tr><td>protocol_usage</td><td>{&#x27;TCP&#x27;: 2026, &#x27;UDP&#x27;: 132, &#x27;RAW&#x27;: 131, &#x27;ARP&#x27;: 35}</td></tr><tr><td>top_src_ips</td><td>[[&#x27;192.168.1.5&#x27;, 1039], [&#x27;62.210.92.65&#x27;, 309], [&#x27;142.54.189.109&#x27;, 150], [&#x27;192.168.1.2&#x27;, 138], [&#x27;50.7.87.85&#x27;, 134], [&#x27;50.7.85.218&#x27;, 97], [&#x27;142.54.189.107&#x27;, 82], [&#x27;50.7.85.222&#x27;, 64], [&#x27;50.7.85.220&#x27;, 54], [&#x27;185.105.237.12&#x27;, 52]]</td></tr><tr><td>top_dst_ips</td><td>[[&#x27;192.168.1.5&#x27;, 1039], [&#x27;62.210.92.65&#x27;, 312], [&#x27;50.7.87.85&#x27;, 148], [&#x27;50.7.85.218&#x27;, 140], [&#x27;142.54.189.109&#x27;, 114], [&#x27;224.0.0.251&#x27;, 95], [&#x27;142.54.189.107&#x27;, 73], [&#x27;50.7.85.222&#x27;, 72], [&#x27;185.105.237.12&#x27;, 44], [&#x27;224.0.0.22&#x27;, 38]]</td></tr><tr><td>top_ports</td><td>[[443, 1377], [48463, 621], [5089, 248], [8593, 243], [10257, 237], [5353, 190], [8589, 175], [12418, 126], [2750, 123], [3520, 110], [5094, 96], [11995, 90], [9891, 82], [13511, 76], [8594, 74], [13636, 53], [1559, 45], [2481, 37], [2772, 33], [53, 32]]</td></tr></tbody></table></div>
     </div>
 
     <div class="section">
         <h3>۲) درخواست‌های HTTP <span class="badge badge-http">HTTP</span></h3>
-        <table><tr><th>Timestamp</th><th>Source</th><th>Destination</th><th>Host</th><th>Path</th></tr><tr><td>2025-11-15T02:14:46.347471Z</td><td>192.168.1.5:11996</td><td>142.54.189.109:80</td><td>crl3.digicert.com</td><td>/DigiCertGlobalRootG2.crl</td></tr><tr><td>2025-11-15T02:14:46.583929Z</td><td>142.54.189.109:80</td><td>192.168.1.5:11996</td><td></td><td></td></tr><tr><td>2025-11-15T02:14:46.347471Z</td><td>192.168.1.5:11996</td><td>142.54.189.109:80</td><td>crl3.digicert.com</td><td>/DigiCertGlobalRootG2.crl</td></tr><tr><td>2025-11-15T02:14:46.583929Z</td><td>142.54.189.109:80</td><td>192.168.1.5:11996</td><td></td><td></td></tr><tr><td>2025-11-15T02:14:46.347471Z</td><td>192.168.1.5:11996</td><td>142.54.189.109:80</td><td>crl3.digicert.com</td><td>/DigiCertGlobalRootG2.crl</td></tr><tr><td>2025-11-15T02:14:46.583929Z</td><td>142.54.189.109:80</td><td>192.168.1.5:11996</td><td></td><td></td></tr></table>
+        <div class='table-container'><table><thead><tr><th>Timestamp</th><th>Source</th><th>Destination</th><th>Host</th><th>Path</th></tr></thead><tbody><tr><td>2025-11-15T02:14:46.347471Z</td><td>192.168.1.5:11996</td><td>142.54.189.109:80</td><td>crl3.digicert.com</td><td>/DigiCertGlobalRootG2.crl</td></tr><tr><td>2025-11-15T02:14:46.583929Z</td><td>142.54.189.109:80</td><td>192.168.1.5:11996</td><td></td><td></td></tr><tr><td>2025-11-15T02:14:46.347471Z</td><td>192.168.1.5:11996</td><td>142.54.189.109:80</td><td>crl3.digicert.com</td><td>/DigiCertGlobalRootG2.crl</td></tr><tr><td>2025-11-15T02:14:46.583929Z</td><td>142.54.189.109:80</td><td>192.168.1.5:11996</td><td></td><td></td></tr><tr><td>2025-11-15T02:14:46.347471Z</td><td>192.168.1.5:11996</td><td>142.54.189.109:80</td><td>crl3.digicert.com</td><td>/DigiCertGlobalRootG2.crl</td></tr><tr><td>2025-11-15T02:14:46.583929Z</td><td>142.54.189.109:80</td><td>192.168.1.5:11996</td><td></td><td></td></tr></tbody></table></div>
     </div>
 
     <div class="section">
         <h3>۳) تحلیل DNS <span class="badge badge-dns">DNS</span></h3>
-        <p>هیچ داده‌ای موجود نیست.</p>
+        <div class='no-data'>هیچ داده‌ای موجود نیست.</div>
     </div>
 
     <div class="section">
         <h3>۴) TLS / استخراج SNI <span class="badge badge-tls">TLS</span></h3>
-        <p>هیچ داده‌ای موجود نیست.</p>
+        <div class='no-data'>هیچ داده‌ای موجود نیست.</div>
     </div>
 
     <div class="section">
         <h3>۵) مانیتورینگ ARP <span class="badge badge-arp">ARP</span></h3>
-        <p>هیچ داده‌ای موجود نیست.</p>
+        <div class='no-data'>هیچ داده‌ای موجود نیست.</div>
     </div>
 
     <div class="section">
         <h3>۶) تهدیدها و حملات شناسایی‌شده <span class="badge badge-attk">ATTACK</span></h3>
-        <p>هیچ داده‌ای موجود نیست.</p>
+        <div class='no-data'>هیچ داده‌ای موجود نیست.</div>
     </div>
 
     <div class="footer">

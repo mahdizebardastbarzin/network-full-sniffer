@@ -1,0 +1,10 @@
+2025-11-16 10:44:08,866 - __main__ - INFO - Starting DNS traffic analysis...
+2025-11-16 10:44:08,942 - __main__ - INFO - Loaded 22583 packets for analysis
+2025-11-16 10:44:08,947 - __main__ - INFO - DNS analysis completed in 0.08 seconds
+2025-11-16 10:44:08,947 - __main__ - INFO - Processed 22583 total packets, 1001 DNS packets
+2025-11-16 10:44:08,948 - __main__ - INFO - Found 0 suspicious domains
+2025-11-16 10:44:13,705 - __main__ - INFO - Starting DNS traffic analysis...
+2025-11-16 10:44:13,789 - __main__ - INFO - Loaded 22583 packets for analysis
+2025-11-16 10:44:13,794 - __main__ - INFO - DNS analysis completed in 0.09 seconds
+2025-11-16 10:44:13,795 - __main__ - INFO - Processed 22583 total packets, 1001 DNS packets
+2025-11-16 10:44:13,795 - __main__ - INFO - Found 0 suspicious domains
